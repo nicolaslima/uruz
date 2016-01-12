@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nicolaslima/uruz.svg?branch=master)](https://travis-ci.org/nicolaslima/uruz)
+[![Build Status](https://travis-ci.org/nicolaslima/uruz.svg)](https://travis-ci.org/nicolaslima/uruz)
 
 # Uruz
 
