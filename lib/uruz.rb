@@ -2,7 +2,8 @@ require 'smarter_csv'
 require 'extensions/string.rb'
 
 require 'uruz/version'
-require 'uruz/vo2max/vo2max_table_data'
+require 'calculation_data/vo2max_data'
+require 'calculation_data/imc_data'
 require 'uruz/vo2max'
 require 'uruz/user'
 

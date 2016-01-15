@@ -10,12 +10,11 @@ class Uruz::User
 	end
 
 	def imc
-		# Uruz::IMC.new(distance, age, gender)
+		IMC.calculate(self.height, self.weight)
 	end
 
 	def vo2max(distance)
-		vo2max = Vo2max.new(distance, self.age, self.gender)
-		vo2max.classification(distance)
+		classification = Vo2max.classification(self.distance, self.age, self.gender)
 	end
 
 end
