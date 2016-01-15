@@ -1,4 +1,3 @@
-require 'smarter_csv'
 require 'extensions/string.rb'
 
 require 'uruz/version'

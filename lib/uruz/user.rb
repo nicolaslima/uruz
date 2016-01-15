@@ -14,7 +14,7 @@ class Uruz::User
 	end
 
 	def vo2max(distance)
-		classification = Vo2max.classification(self.distance, self.age, self.gender)
+		classification = Uruz::Vo2max.classification(distance, self.age, self.gender)
 	end
 
 end
