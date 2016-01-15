@@ -22,7 +22,7 @@ describe Uruz::User do
   	user = Uruz::User.new(age, height, weight, gender)
   	result = user.vo2max(distance)
 
-  	expect(result).to be false
+  	expect(result).to be :excellent
   end
 
 end
