@@ -1,28 +1,21 @@
 class Uruz::User
 
-	attr_accessor :user
-	attr_reader 	:errors
+	attr_accessor :age, :height, :weight, :gender
 
-	class Attributes
-		USER = [:age, :height, :weight, :gender]
+	def initialize(age, height, weight, gender)
+		self.age = age
+		self.height = height
+		self.weight = weight
+		self.gender = gender
 	end
 
-	def initialize(user)
-		@user = user
-		raise_user_errors unless valid?
+	def imc
+		# Uruz::IMC.new(distance, age, gender)
 	end
 
-	def valid?
-		user_attributes_valid?
+	def vo2max(distance)
+		vo2max = Vo2max.new(distance, self.age, self.gender)
+		vo2max.classification(distance)
 	end
 
-	private
-
-		def user_attributes_valid?
-			!@user.nil? && @user.is_a?(Hash) && @user.keys.eql?(Attributes::USER)
-		end
-
-		def raise_user_errors
-			@errors = Uruz::Errors::InvalidAttribute
-		end
 end

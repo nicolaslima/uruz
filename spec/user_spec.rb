@@ -2,14 +2,13 @@ require 'spec_helper'
 
 describe Uruz::User do
   it 'has a valid user' do
-  	user = Uruz::User.new({age: 1, height: 1.75, weight: 70, gender: "male"})
+  	age = 20
+  	height = 1.75
+  	weight = 70
+  	gender = "male"
 
-    expect(user.valid?).to be true
-  end
+  	user = Uruz::User.new(age, height, weight, gender)
 
-  it 'when a not user valid' do
-		user = Uruz::User.new({})
-
-		expect(user.valid?).not_to be true
+    expect(user.nil?).to be false
   end
 end
