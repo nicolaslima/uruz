@@ -2,9 +2,8 @@
 
 # Uruz
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/uruz`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+This gem performs simple calculations VO2max and soon also of BMI
 
 ## Installation
 
@@ -24,7 +23,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To perform the calculation VO2Max
+
+#### Calculate VO2max. ml(kg.min)-1
+
+```ruby
+result = Uruz::Vo2max.calculate(distance)
+```
+
+Variable    | Type
+----------- | -------------
+distance    | Float
+result    	| Float
+
+#### Classification based in result of VO2max. ml(kg.min)-1
+
+```ruby
+classification = Uruz::Vo2max.classification(distance, age, gender)
+```
+
+Variable            | Type
+------------------- | -------------
+distance            | Float
+age                 | Integer
+gender              | Simble (:male, :female)
+classification      | Simble (:very_weak, :weak, :middle, :good, :excellent, :higher)
 
 ## Development
 
