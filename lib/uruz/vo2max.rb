@@ -12,8 +12,8 @@ class Uruz::Vo2max
 
 		vo2max_gender_data = gender.eql?(:male) ? $vo2max_male_data : $vo2max_female_data
 
-		classificatio = result_by_gender(vo2max_gender_data, age, vo2max_result)
-		classificatio.first
+		classification = result_by_gender(vo2max_gender_data, age, vo2max_result)
+		classification.first
 	end
 
 	private
